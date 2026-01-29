@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Feo Criss - Digitaliza tu negocio</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
+  body{background:#f5f5f5;color:#333;line-height:1.6;}
+  a{text-decoration:none;color:inherit;}
+
+  /* NAVBAR */
+  nav{
+    position: sticky;
+    top:0;
+    z-index:1000;
+    background:linear-gradient(90deg,#4f46e5,#6366f1);
+    padding:1rem 2rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+  }
+  nav .logo{font-size:1.8rem;font-weight:700;color:#fff;}
+  nav ul{list-style:none;display:flex;gap:1.5rem;flex-wrap:wrap;}
+  nav ul li a{color:#fff;font-weight:600;transition:.3s;}
+  nav ul li a:hover{color:#fbbf24;}
+
+  /* HERO */
+  .hero{
+    height:80vh;
+    background:url("https://images.unsplash.com/photo-1581091215367-8c35d6f09e14?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+    padding:2rem;
+  }
+  .hero h1{font-size:2.5rem;margin-bottom:1rem;text-shadow:2px 2px 8px rgba(0,0,0,.6);}
+  .hero p{font-size:1.2rem;max-width:700px;text-shadow:1px 1px 5px rgba(0,0,0,.6);}
+  .hero .btn{margin-top:2rem;padding:.8rem 1.8rem;background:#fbbf24;color:#1f2937;font-weight:700;border-radius:8px;transition:.3s;}
+  .hero .btn:hover{background:#f59e0b;}
+
+  section{padding:4rem 2rem;}
+  .section-title{text-align:center;font-size:2rem;margin-bottom:2rem;color:#4f46e5;}
+
+  /* SERVICIOS */
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:1200px;margin:auto;}
+  .service-card{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 8px 20px rgba(0,0,0,.1);transition:transform .3s;}
+  .service-card:hover{transform:translateY(-6px);}
+  .service-card h3{color:#4f46e5;margin-bottom:1rem;}
+
+  /* SOBRE */
+  .about-wrapper{max-width:900px;margin:auto;text-align:center;}
+  .about-wrapper img{width:150px;height:150px;border-radius:50%;object-fit:cover;margin-bottom:1.5rem;}
+
+  /* CALENDARIO */
+  .booking-wrapper{max-width:1000px;margin:auto;display:flex;justify-content:center;}
+  .booking-wrapper iframe{width:100%;height:800px;border:none;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.15);}
+
+  /* TESTIMONIOS */
+  .testimonials{max-width:900px;margin:auto;display:flex;flex-direction:column;gap:2rem;}
+  .testimonial-card{background:#fff;padding:1.5rem;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.1);font-style:italic;}
+
+  /* CONTACTO */
+  .contact-form{max-width:600px;margin:auto;display:flex;flex-direction:column;gap:1rem;}
+  .contact-form input,.contact-form textarea{padding:.8rem;border-radius:8px;border:1px solid #ccc;font-size:1rem;}
+  .contact-form button{padding:.8rem;border:none;border-radius:8px;background:#4f46e5;color:#fff;font-weight:600;cursor:pointer;transition:.3s;}
+  .contact-form button:hover{background:#6366f1;}
+
+  footer{background:#333;color:#fff;text-align:center;padding:2rem;}
+
+  /* RESPONSIVE */
+  @media(max-width:768px){
+    .hero h1{font-size:2rem;}
+    .hero p{font-size:1rem;}
+    nav ul{justify-content:center;gap:1rem;}
+    .booking-wrapper iframe{height:650px;} /* más cómodo para móviles */
+  }
+
+  @media(max-width:480px){
+    .hero h1{font-size:1.6rem;}
+    .hero p{font-size:.95rem;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">El Feo Criss</div>
+  <ul>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#sobre">Sobre mí</a></li>
+    <li><a href="#cita">Agendar cita</a></li>
+    <li><a href="#testimonios">Testimonios</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <h1>Digitaliza tu negocio con El Feo Criss</h1>
+  <p>8 años en el medio, mijo. Transforma tu idea en una web profesional y haz crecer tu negocio en el mundo digital.</p>
+  <a href="#cita" class="btn">Agendar una cita ahora</a>
+</section>
+
+<section id="servicios">
+  <h2 class="section-title">Servicios</h2>
+  <div class="services">
+    <div class="service-card">
+      <h3>Diseño Web Profesional</h3>
+      <p>Construyo páginas modernas, responsive y optimizadas para convertir visitantes en clientes.</p>
+    </div>
+    <div class="service-card">
+      <h3>Digitalización de Negocios</h3>
+      <p>Lleva tu negocio al mundo online: desde catálogos hasta sistemas de reservas y pagos digitales.</p>
+    </div>
+    <div class="service-card">
+      <h3>Mantenimiento y Soporte</h3>
+      <p>Actualizaciones, seguridad y soporte continuo para que tu web siempre funcione al 100%.</p>
+    </div>
+    <div class="service-card">
+      <h3>Estrategia SEO y Marketing</h3>
+      <p>Optimización para buscadores y asesoría para que tus clientes te encuentren fácilmente en Google.</p>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <h2 class="section-title">Sobre El Feo Criss</h2>
+  <div class="about-wrapper">
+    <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&w=200&q=80" alt="El Feo Criss">
+    <p>El Feo Criss es un desarrollador web profesional con <strong>8 años en el medio, mijo</strong> creando soluciones digitales para negocios de todos los tamaños.</p>
+    <p>Experto en HTML, CSS, JavaScript, frameworks modernos y optimización SEO, Criss te ayudará a llevar tu negocio al siguiente nivel digital.</p>
+  </div>
+</section>
+
+<section id="cita">
+  <h2 class="section-title">Agendar una Cita</h2>
+  <p style="text-align:center; max-width:700px; margin:auto; margin-bottom:2rem;">
+    Agenda tu sesión de asesoría para digitalizar tu negocio. Podemos revisar tu proyecto, planificar tu web y optimizar tu presencia online.
+  </p>
+  <div class="booking-wrapper">
+    <iframe
+      src="https://calendar.zoho.eu/eventreqForm/zz08011230622ff5b84ad97e01e9013c95c58513a60534d39320d9471717c4e4ba735e901682faaec7be3582f535e1b237be538e58?theme=8&l=en&tz=Europe/Paris"
+      title="Schedule appointment for El Feo Criss"
+      scrolling="no"
+      allowTransparency="true">
+    </iframe>
+  </div>
+</section>
+
+<section id="testimonios">
+  <h2 class="section-title">Testimonios</h2>
+  <div class="testimonials">
+    <div class="testimonial-card">
+      "Criss transformó completamente mi negocio. Ahora tengo una web moderna que atrae clientes y aumenta mis ventas."
+      <br>– <strong>Laura M., dueña de boutique</strong>
+    </div>
+    <div class="testimonial-card">
+      "Más de 8 años en el medio, mijo. Profesional, confiable y creativo. Mi negocio digital nunca había estado tan organizado."
+      <br>– <strong>Juan P., restaurante</strong>
+    </div>
+    <div class="testimonial-card">
+      "El Feo Criss sabe exactamente cómo digitalizar tu negocio y hacer que funcione. Recomendado al 100%."
+      <br>– <strong>Carla R., emprendimiento tech</strong>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <h2 class="section-title">Contacto</h2>
+  <p style="text-align:center; max-width:700px; margin:auto; margin-bottom:2rem;">
+    Envíame un mensaje directo y te responderé lo antes posible.
+  </p>
+  <form class="contact-form" action="https://formsubmit.co/carrlos.yen.h@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="Nuevo mensaje desde El Feo Criss">
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="mensaje" rows="5" placeholder="Mensaje" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 El Feo Criss — Todos los derechos reservados
+</footer>
+
+</body>
+</html>
